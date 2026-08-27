@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/logo.png" width="100px" height="100px" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preload" as="video" href="/bella.mp4" type="video/mp4" />
+  <title>BELLA</title>
+  <style>
+    /* Put the background directly in the head to prevent ANY flash */
+    html, body {
+      background-color: #3F0F13 !important;
+      margin: 0;
+      padding: 0;
+    }
+    #intro-video-container {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 9999; 
+      background-color: #3F0F13; display: flex; justify-content: center; align-items: center; 
+      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    }
+    #intro-video-container.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    #intro-video { width: 100%; height: 100%; object-fit: cover; }
+  </style>
+</head>
+<body style="background-color: #3F0F13;">
+  <div id="intro-video-container">
+    <video id="intro-video" src="/bella.mp4" autoplay muted playsinline preload="auto"></video>
+  </div>
+
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
