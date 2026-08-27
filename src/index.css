@@ -62,7 +62,7 @@ a, button, .icon-btn, .category-btn, .auth-btn, .product-card-link, select, inpu
 /* Navbar */
 .navbar {
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 2rem 2rem 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -226,15 +226,17 @@ a, button, .icon-btn, .category-btn, .auth-btn, .product-card-link, select, inpu
 .hero-section {
   width: 100%;
   height: 450px;
+  margin-top: 110px;
   overflow: hidden;
 }
 
 .hero-section .hero {
-  width: 100%;
-  height: 100%;
-  display: block;
+  margin-left: 42px;
   object-fit: cover;
   object-position: center;
+  width: 94%;
+  height: 106%;
+  display: block;
 }
 
 .icon-btn {
@@ -424,8 +426,9 @@ a, button, .icon-btn, .category-btn, .auth-btn, .product-card-link, select, inpu
 
 /* About Section */
 .about-section {
+  margin-top: 110px;
   width: 100%;
-  padding: 8rem 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   background-color: transparent;
@@ -447,8 +450,9 @@ a, button, .icon-btn, .category-btn, .auth-btn, .product-card-link, select, inpu
 
 /* Reviews Section */
 .reviews-section {
+  margin-top: 110px;
   width: 100%;
-  padding: 6rem 0;
+  padding: 0;
   background-color: transparent;
   overflow: hidden;
 }
@@ -526,8 +530,9 @@ a, button, .icon-btn, .category-btn, .auth-btn, .product-card-link, select, inpu
 
 /* Policy Section */
 .policy-section {
+  margin-top: 110px;
   width: 100%;
-  padding: 6rem 0;
+  padding: 0;
   background-color: transparent;
 }
 
@@ -574,13 +579,13 @@ a, button, .icon-btn, .category-btn, .auth-btn, .product-card-link, select, inpu
 /* Footer Section */
 .footer-section {
   width: 100%;
-  padding: 6rem 0 2rem 0;
+  padding: 4rem 0 2rem 0;
   background-color: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-top: 1px solid rgba(245, 60, 68, 0.15);
-  margin-top: 4rem;
+  margin-top: 110px;
 }
 
 .footer-content {
@@ -663,7 +668,7 @@ a, button, .icon-btn, .category-btn, .auth-btn, .product-card-link, select, inpu
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 1rem;
+    padding: 1.5rem 1rem 1rem 1rem;
     gap: 1rem;
   }
 
@@ -744,17 +749,24 @@ a, button, .icon-btn, .category-btn, .auth-btn, .product-card-link, select, inpu
 
   /* Padding & Layout adjustments for responsive */
   .about-section {
-    padding: 4rem 1rem;
+    padding: 0 1rem;
+    margin-top: 60px;
   }
 
-  .reviews-section, .policy-section, .footer-section {
+  .reviews-section, .policy-section {
+    padding: 0 1rem;
+    margin-top: 60px;
+  }
+
+  .footer-section {
     padding: 4rem 1rem 1rem 1rem;
+    margin-top: 60px;
   }
 
   .hero-section {
     height: 60vh;
     min-height: 400px;
-    margin-top: 0;
+    margin-top: 60px;
   }
 
   .policy-grid {

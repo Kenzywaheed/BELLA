@@ -1,7 +1,7 @@
 export const faceCareProducts = [
   {
     id: 1,
-    name: "MIRACLE MANUKA",
+    name: "MIRACLE MĀNUKA",
     category: "Face Cream",
     price: 32.00,
     oldPrice: 40.00,
@@ -10,12 +10,12 @@ export const faceCareProducts = [
     reviews: 128,
     badge: "BESTSELLER",
     image: "/cream1.webp",
-    description: "DAILY DEFENSE CREAM.",
-    details: "Smoothes and Hydrates dry, sensitive skin with a creme containing Manuka and Kanuka."
+    description: "Daily defense botanical skin crème.",
+    details: "Soothes and hydrates dry, sensitive skin with a crème containing Manuka and Kanuka. 100% natural, safe for kids, and steroid free."
   },
   {
     id: 2,
-    name: "LOCO",
+    name: "DAY + NIGHT Face Cream",
     category: "Face Cream",
     price: 42.00,
     oldPrice: null,
@@ -24,12 +24,12 @@ export const faceCareProducts = [
     reviews: 156,
     badge: null,
     image: "/cream2.webp",
-    description: "DAY + NIGHT CREAM.",
-    details: "SIMPLE. CLEAN. REVITALIZING."
+    description: "Simple, clean, and revitalizing.",
+    details: "A 30ml dual-action face cream designed for both morning and evening skincare routines."
   },
   {
     id: 3,
-    name: "Velvet Cloud Day Cream",
+    name: "FACE CREAM DAY CALCIUM",
     category: "Face Cream",
     price: 35.00,
     oldPrice: null,
@@ -38,12 +38,12 @@ export const faceCareProducts = [
     reviews: 84,
     badge: "NEW",
     image: "/cream3.webp",
-    description: "CALICUM",
-    details: "This cloud-like cream melts instantly into the skin, providing a matte yet hydrated finish that serves as the perfect base for your daily makeup."
+    description: "Calcium-infused daily face cream.",
+    details: "Inspired by French technologies for advanced daily hydration. 50g."
   },
   {
     id: 4,
-    name: "CO & MO",
+    name: "CO&MO Moisture Cream",
     category: "Face Cream",
     price: 48.00,
     oldPrice: 55.00,
@@ -52,12 +52,12 @@ export const faceCareProducts = [
     reviews: 210,
     badge: "SALE",
     image: "/cream4.webp",
-    description: "Rice Mucin Intensive Moisture Cream ",
-    details: "Mild moisturizing cream that restores dry and sensitive skin, helping to balance oil and moisture.",
+    description: "Rice mucin intensive moisture cream.",
+    details: "Nourishes and enhances elasticity. Mild cream that restores dry, sensitive skin by balancing oil and moisture. Made in Korea.",
   },
   {
     id: 5,
-    name: "GLOWNEST",
+    name: "GlowNest Hydra Face Cream",
     category: "Face Cream",
     price: 38.00,
     oldPrice: null,
@@ -66,12 +66,12 @@ export const faceCareProducts = [
     reviews: 95,
     badge: null,
     image: "/cream5.webp",
-    description: "HYDRA FACE CREAM",
-    details: "For all skin types"
+    description: "Deep hydration & daily nourishment.",
+    details: "Formulated for all skin types to provide intensive daily hydration. Net weight 50g."
   },
   {
     id: 6,
-    name: "BEAUTY GODS",
+    name: "Beauty Gods Advanced Brightening",
     category: "Face Cream",
     price: 45.00,
     oldPrice: null,
@@ -80,12 +80,12 @@ export const faceCareProducts = [
     reviews: 132,
     badge: "BESTSELLER",
     image: "/cream6.webp",
-    description: "Evens out skin tone for a pearlescent glow.",
-    details: "Advanced Brightening Face Cream."
+    description: "Advanced brightening face cream.",
+    details: "Infused with 12% Kumkumadi Oil and formulated with Ayurveda. Dermatologically & clinically tested."
   },
   {
     id: 7,
-    name: "Vity",
+    name: "vity Anti Aging Rejuvenating Face Cream",
     category: "Face Cream",
     price: 29.00,
     oldPrice: null,
@@ -94,14 +94,14 @@ export const faceCareProducts = [
     reviews: 189,
     badge: "NEW",
     image: "/cream7.webp",
-    description: "ANTI ACING REJUVENATING FACE CREAM",
-    details: "Deeply hydrates and smooths the skin, helping reduce the appearance of fine lines for a youthful, radiant glow."
+    description: "Molecular cosmetics rejuvenating face cream.",
+    details: "Formulated with VITY CORE COMPLEX™ for targeted anti-aging benefits. 30 ml."
   },
 
 
   {
     id: 8,
-    name: "GELA",
+    name: "GELA Whitening & Brightening Cream",
     category: "Face Cream",
     price: 29.00,
     oldPrice: null,
@@ -110,8 +110,8 @@ export const faceCareProducts = [
     reviews: 189,
     badge: "NEW",
     image: "/cream 8.webp",
-    description: "Whitining & Brightening Cream + Alpha Arbutin",
-    details: "A Lightweight brightening cream designed to enhance radiance and promote a more even-looking complexion."
+    description: "Formulated with Alpha Arbutin.",
+    details: "Clinical formulations for all skin types, even sensitive skin. Cruelty-free and dermatologist tested. 50ml."
   },
 
   // Other Categories (Serums, Masks, Washes, etc.)
@@ -139,108 +139,111 @@ export const faceCareProducts = [
     id: 19, name: "SERA NATURAL", category: "Face Serum", price: 48.00, oldPrice: null, discount: null, rating: 4.7, reviews: 145, badge: "NEW", image: "/serum7.webp", description: "Niacinamide face serum", details: "Helps with glow & pigmentation"
   },
   {
-    id: 20, name: "Squalane Barrier Serum", category: "Face Serum", price: 42.00, oldPrice: null, discount: null, rating: 4.8, reviews: 112, badge: null, image: "/serum8.webp", description: "Strengthens skin barrier.", details: "100% plant-derived squalane."
+    id: 20, name: "Pureskin Beauty Elixirs Vitamin-C", category: "Face Serum", price: 42.00, oldPrice: null, discount: null, rating: 4.8, reviews: 112, badge: null, image: "/serum8.webp", description: "Brightening & anti-aging face serum.", details: "Contains hyaluronic acid. Anti-aging, brighten, firming repair, protecting, improves skin elasticity."
   },
   {
-    id: 21, name: "Salicylic Acid Serum", category: "Face Serum", price: 34.00, oldPrice: null, discount: null, rating: 4.5, reviews: 230, badge: null, image: "/serum9.webp", description: "Clears blemishes and acne.", details: "2% BHA liquid exfoliant for clear skin."
+    id: 21, name: "Lavenea Skin Science Lavender Radiance Serum", category: "Face Serum", price: 34.00, oldPrice: null, discount: null, rating: 4.5, reviews: 230, badge: null, image: "/serum9.webp", description: "Lavender radiance serum.", details: "Brightening, hydrating, skin refining with hyaluronic acid and botanical extract. 30 mL / 1.01 FL OZ."
   },
   {
-    id: 22, name: "Bakuchiol Alternative Serum", category: "Face Serum", price: 58.00, oldPrice: null, discount: null, rating: 4.9, reviews: 88, badge: "NEW", image: "/serum10.webp", description: "Plant-based retinol alternative.", details: "Firms and smooths without irritation."
+    id: 22, name: "Hydrating Face Serum", category: "Face Serum", price: 58.00, oldPrice: 65.00, discount: 10, rating: 4.9, reviews: 340, badge: "BESTSELLER", image: "/serum10.webp", description: "Deep hydration for healthy glow.", details: "Locks in moisture, brightens dull skin. Smooth lightweight formula, fast absorbing. 30 ml / 1.01 fl.oz."
   },
   {
-    id: 23, name: "Rosehip Oil Serum", category: "Face Serum", price: 30.00, oldPrice: null, discount: null, rating: 4.7, reviews: 176, badge: null, image: "/serum11.webp", description: "Nourishes and heals scars.", details: "Cold-pressed organic rosehip seed oil."
+    id: 23, name: "Snail Collagen Face Serum", category: "Face Serum", price: 29.00, oldPrice: null, discount: null, rating: 4.6, reviews: 155, badge: null, image: "/serum11.webp", description: "Snail collagen deep cleansing face serum.", details: "Anti acne, whitening, brightening, anti ageing."
   },
   {
-    id: 24, name: "Tranexamic Dark Spot Serum", category: "Face Serum", price: 46.00, oldPrice: null, discount: null, rating: 4.8, reviews: 199, badge: "BESTSELLER", image: "/serum12.webp", description: "Fades hyperpigmentation.", details: "Targets stubborn dark spots and sun damage."
+    id: 24, name: "Beauty Gods K-Vedhic BioBloom Night Serum", category: "Face Serum", price: 65.00, oldPrice: null, discount: null, rating: 4.7, reviews: 90, badge: null, image: "/serum12.webp", description: "BioBloom night serum.", details: "Repairs, brightens, hydrates, restores. 50ml / 1.01 fl. oz."
   },
   {
-    id: 25, name: "Gold Flake Luxury Serum", category: "Face Serum", price: 85.00, oldPrice: 100.00, discount: 15, rating: 5.0, reviews: 54, badge: "SALE", image: "/serum13.webp", description: "Ultimate radiant luxury.", details: "Infused with 24k gold flakes for luminosity."
+    id: 25, name: "DAY + NIGHT Face Cream", category: "Face Cream", price: 85.00, oldPrice: 100.00, discount: 15, rating: 5.0, reviews: 54, badge: "SALE", image: "/serum13.webp", description: "Simple. Clean. Revitalizing.", details: "Day and night face cream. Net Wt. 30ml."
   },
   {
-    id: 26, name: "Cleanser 1", category: "Face Wash", price: 25.00, oldPrice: null, discount: null, rating: 4.8, reviews: 120, badge: "NEW", image: "/cleanser 1.webp", description: "Gentle foaming cleanser.", details: "Removes impurities without stripping skin."
+    id: 26, name: "Natural Nourish Face Cleanser", category: "Face Wash", price: 25.00, oldPrice: null, discount: null, rating: 4.8, reviews: 120, badge: "NEW", image: "/cleanser 1.webp", description: "Hydrates and soothes sensitive skin.", details: "Removes dirt and debris, moisturizes, and repairs skin's barrier. With Aloe Vera, Safflower oil, Rosehip Oil, Cucumber, Seed Oil. 250 ML / 8.5 OZ."
   },
   {
-    id: 27, name: "Cleanser 2", category: "Face Wash", price: 28.00, oldPrice: 35.00, discount: 20, rating: 4.9, reviews: 150, badge: "SALE", image: "/cleanser 2.webp", description: "Hydrating gel wash.", details: "Leaves skin soft and refreshed."
+    id: 27, name: "Face Cleanser Moisture Balance", category: "Face Wash", price: 28.00, oldPrice: 35.00, discount: 20, rating: 4.9, reviews: 150, badge: "SALE", image: "/cleanser 2.webp", description: "Vitamin A derivative anti-aging face cleanser.", details: "Helps with fine lines, wrinkles, and brown spots. Evens and brightens skin tone. 10 g."
   },
   {
-    id: 28, name: "Cleanser 3", category: "Face Wash", price: 32.00, oldPrice: null, discount: null, rating: 4.7, reviews: 90, badge: "BESTSELLER", image: "/cleanser 3.webp", description: "Deep pore cleanser.", details: "Perfect for oily or combination skin."
+    id: 28, name: "All Day Store Aloe Vera Foam Face Wash", category: "Face Wash", price: 32.00, oldPrice: null, discount: null, rating: 4.7, reviews: 90, badge: "BESTSELLER", image: "/cleanser 3.webp", description: "Aloe vera foam face wash.", details: "Removes makeup and dirt. 150ml / 5.07 fl oz."
   },
   {
-    id: 29, name: "Cleanser 4", category: "Face Wash", price: 24.00, oldPrice: null, discount: null, rating: 4.6, reviews: 85, badge: null, image: "/cleanser 4.webp", description: "Creamy face wash.", details: "Nourishes dry skin while cleansing."
+    id: 29, name: "All Day Store Vitamin C Foam Face Wash", category: "Face Wash", price: 24.00, oldPrice: null, discount: null, rating: 4.6, reviews: 85, badge: null, image: "/cleanser 4.webp", description: "Vitamin C foam face wash.", details: "For skin brightening and improving skin texture. 150ml / 5.07 fl oz."
   },
   {
-    id: 30, name: "Cleanser 5", category: "Face Wash", price: 30.00, oldPrice: null, discount: null, rating: 4.8, reviews: 110, badge: "NEW", image: "/cleanser 5.webp", description: "Exfoliating wash.", details: "Gently removes dead skin cells."
+    id: 30, name: "All Day Store Coffee Beans Foam Face Wash", category: "Face Wash", price: 30.00, oldPrice: null, discount: null, rating: 4.8, reviews: 110, badge: "NEW", image: "/cleanser 5.webp", description: "Coffee beans foam face wash.", details: "For skin brightening & anti-aging skin. 150ml / 5.07 fl oz."
   },
   {
-    id: 31, name: "Cleanser 6", category: "Face Wash", price: 22.00, oldPrice: null, discount: null, rating: 4.5, reviews: 60, badge: null, image: "/cleanser 6.webp", description: "Soothing milk cleanser.", details: "Ideal for sensitive skin."
+    id: 31, name: "Pure Glow Oil Clear Facewash", category: "Face Wash", price: 22.00, oldPrice: null, discount: null, rating: 4.5, reviews: 60, badge: null, image: "/cleanser 6.webp", description: "Refresh & purify naturally.", details: "With Green tea & Vitamin C. Brightens, moisturizes, and nourishes skin. 100 ml."
   },
   {
-    id: 32, name: "Cleanser 7", category: "Face Wash", price: 26.00, oldPrice: null, discount: null, rating: 4.7, reviews: 135, badge: "BESTSELLER", image: "/cleanser 7.webp", description: "Purifying clay wash.", details: "Draws out toxins and dirt."
+    id: 32, name: "Innsaei Hydrating Foam Cleanser", category: "Face Wash", price: 26.00, oldPrice: null, discount: null, rating: 4.7, reviews: 135, badge: "BESTSELLER", image: "/cleanser 7.webp", description: "Protects your skin's moisture.", details: "Skin brightening and hydrating. 150 ml."
   },
   {
-    id: 33, name: "Cleanser 8", category: "Face Wash", price: 35.00, oldPrice: 42.00, discount: 15, rating: 4.9, reviews: 205, badge: "SALE", image: "/cleanser 8.webp", description: "Brightening foam wash.", details: "Evens skin tone with Vitamin C."
+    id: 33, name: "Beauty Gods Advanced Brightening Deep Cleansing Face Wash", category: "Face Wash", price: 35.00, oldPrice: 42.00, discount: 15, rating: 4.9, reviews: 205, badge: "SALE", image: "/cleanser 8.webp", description: "Salicylic Acid - Aloe vera Extract - Olive Extract.", details: "Cleanses, balances, brightens, and prevents. Dermatologically & Clinically Tested. 100ml."
   },
   {
-    id: 34, name: "Charcoal Detox Mask", category: "Face Mask", price: 26.00, oldPrice: null, discount: null, rating: 4.8, reviews: 120, badge: "NEW", image: "/mask 1.webp", description: "Deep cleanses pores.", details: "Activated charcoal pulls out impurities."
+    id: 34, name: "Revitalizing Facial Mask", category: "Face Mask", price: 12.00, oldPrice: null, discount: null, rating: 4.8, reviews: 120, badge: "NEW", image: "/mask 1.webp", description: "Rose water revitalizing mask.", details: "For oily skin, sulfate free."
   },
   {
-    id: 35, name: "Hydrating Aloe Mask", category: "Face Mask", price: 30.00, oldPrice: 38.00, discount: 21, rating: 4.9, reviews: 150, badge: "SALE", image: "/mask 2.jpg", description: "Soothes and deeply hydrates.", details: "Perfect for sun-exposed or dry skin."
+    id: 35, name: "Biodance Hydro Cera-Nol Real Deep Mask", category: "Face Mask", price: 15.00, oldPrice: 20.00, discount: 25, rating: 4.9, reviews: 150, badge: "SALE", image: "/mask 2.jpg", description: "Hydro cera-nol real deep mask.", details: "Low Molecular Hyaluronic Acid Solution, Glacier Water, Panthenol, Ceramide. Soothing, Moisturizing, Nourishing. 34 g."
   },
   {
-    id: 36, name: "Vitamin C Brightening Mask", category: "Face Mask", price: 35.00, oldPrice: null, discount: null, rating: 4.7, reviews: 90, badge: "BESTSELLER", image: "/mask3.jpg", description: "Revitalizes dull skin.", details: "Antioxidant-rich mask for a glowing complexion."
+    id: 36, name: "Centellian 24 Madeca Derma Mask III", category: "Face Mask", price: 18.00, oldPrice: null, discount: null, rating: 4.7, reviews: 90, badge: "BESTSELLER", image: "/mask3.jpg", description: "Intensive formula TECA essence mask.", details: "Whitening & Anti-Wrinkle. 23ml / 0.77 fl.oz."
   },
   {
-    id: 37, name: "Green Tea Matcha Mask", category: "Face Mask", price: 28.00, oldPrice: null, discount: null, rating: 4.6, reviews: 85, badge: null, image: "/mask4.webp", description: "Antioxidant powerhouse.", details: "Calms inflammation and reduces redness."
+    id: 37, name: "Garnier Skin Naturals Black Serum Mask Pure Charcoal", category: "Face Mask", price: 10.00, oldPrice: null, discount: null, rating: 4.6, reviews: 85, badge: null, image: "/mask4.webp", description: "Purifying & hydrating pore-tightening tissue mask.", details: "Black algae, LHA & hyaluronic acid. 15 min. For clogged & enlarged pores."
   },
   {
-    id: 38, name: "Rose Water Gel Mask", category: "Face Mask", price: 32.00, oldPrice: null, discount: null, rating: 4.8, reviews: 110, badge: "NEW", image: "/mask5.webp", description: "Cooling hydration.", details: "Locks in moisture with a beautiful rose scent."
+    id: 38, name: "Qyreon 24 K Golden Ampoule Serum Facial Mask", category: "Face Mask", price: 14.00, oldPrice: null, discount: null, rating: 4.8, reviews: 110, badge: "NEW", image: "/mask5.webp", description: "Moisturizing & repairing deep hydration mask.", details: "Infused with 24k gold. For tired, mature skin. 15min. 25 g / 0.88 oz."
   },
   {
-    id: 39, name: "Turmeric Glow Mask", category: "Face Mask", price: 24.00, oldPrice: null, discount: null, rating: 4.5, reviews: 60, badge: null, image: "/mask6.webp", description: "Restores natural radiance.", details: "A warm, exfoliating mask that evens skin tone."
+    id: 39, name: "Qyreon Hyaluronic Acid Ampoule Serum Facial Mask", category: "Face Mask", price: 12.00, oldPrice: null, discount: null, rating: 4.5, reviews: 60, badge: null, image: "/mask6.webp", description: "Moisturizing & plumping deep hydration mask.", details: "Infused with hyaluronic acid. For dry, dehydrated skin. 15min. 25 g / 0.88 oz."
   },
   {
-    id: 40, name: "Overnight Sleep Mask", category: "Face Mask", price: 40.00, oldPrice: null, discount: null, rating: 4.7, reviews: 135, badge: "BESTSELLER", image: "/mask7.webp", description: "Intense moisture while you sleep.", details: "Wake up to perfectly plump skin."
+    id: 40, name: "Qyreon Vitamin C Ampoule Serum Facial Mask", category: "Face Mask", price: 12.00, oldPrice: null, discount: null, rating: 4.7, reviews: 135, badge: "BESTSELLER", image: "/mask7.webp", description: "Moisturizing & brightening deep hydration mask.", details: "Infused with Vitamin C. For dry, dull skin. 15min. 25 g / 0.88 oz."
   },
   {
-    id: 41, name: "24k Gold Peeling Mask", category: "Face Mask", price: 50.00, oldPrice: 65.00, discount: 23, rating: 4.9, reviews: 205, badge: "SALE", image: "/mask8.webp", description: "Luxurious firming peel.", details: "Lifts, tightens, and gives a stunning glow."
+    id: 41, name: "Qyreon Ampoule Serum Facial Masks Variety Pack", category: "Face Mask", price: 30.00, oldPrice: 38.00, discount: 21, rating: 4.9, reviews: 205, badge: "SALE", image: "/mask8.webp", description: "Variety pack of 3 ampoule serum masks.", details: "Includes Hyaluronic Acid, Vitamin C, and 24 K Golden masks. 25 g / 0.88 oz each."
   },
   {
-    id: 42, name: "Peptide Eye Cream", category: "Eye Cream", price: 34.00, oldPrice: null, discount: null, rating: 4.8, reviews: 145, badge: "NEW", image: "/eye 1.webp", description: "Firms the delicate eye area.", details: "Advanced peptides reduce fine lines and crow's feet."
+    id: 42, name: "Beauty Gods Revitalizing Under Eye Gel", category: "Eye Cream", price: 25.00, oldPrice: null, discount: null, rating: 4.8, reviews: 145, badge: "NEW", image: "/eye 1.webp", description: "Revitalizing under eye gel.", details: "Reduces under-eye bags and dark circles. 25gm."
   },
   {
-    id: 43, name: "Caffeine Eye Serum", category: "Eye Cream", price: 28.00, oldPrice: null, discount: null, rating: 4.9, reviews: 312, badge: "BESTSELLER", image: "/eye 2.jpg", description: "Instantly depuffs eyes.", details: "Green tea and caffeine to wake up tired eyes."
+    id: 43, name: "Numbuzin NAD+ Retinal Volumetox Eye Cream", category: "Eye Cream", price: 38.00, oldPrice: 45.00, discount: 15, rating: 4.9, reviews: 312, badge: "BESTSELLER", image: "/eye 2.jpg", description: "Volumetox eye cream.", details: "Formulated with NAD+ + Retinal + 50 Peptides."
   },
   {
-    id: 44, name: "Retinol Eye Cream", category: "Eye Cream", price: 42.00, oldPrice: 50.00, discount: 16, rating: 4.7, reviews: 98, badge: "SALE", image: "/eye 3.jpg", description: "Overnight wrinkle repair.", details: "Gentle encapsulated retinol for the under-eye."
+    id: 44, name: "Clay Co. Ginseng-Cica Eye Cream with Retinal", category: "Eye Cream", price: 32.00, oldPrice: null, discount: null, rating: 4.7, reviews: 98, badge: null, image: "/eye 3.jpg", description: "Ginseng-cica eye cream.", details: "Formulated with retinal. 0.52 oz. / 15 g."
   },
   {
-    id: 45, name: "Brightening Vitamin C Eye", category: "Eye Cream", price: 36.00, oldPrice: null, discount: null, rating: 4.6, reviews: 112, badge: null, image: "/eye 4.jpg", description: "Fades dark circles.", details: "Potent Vitamin C brightens stubborn shadows."
+    id: 45, name: "Tirtir Collagen Lifting Eye Cream", category: "Eye Cream", price: 36.00, oldPrice: null, discount: null, rating: 4.6, reviews: 112, badge: null, image: "/eye 4.jpg", description: "Collagen lifting eye cream.", details: "Refreshing skin. Wrinkle spot treatment. 15 ml / 0.50 fl.oz."
   },
   {
-    id: 46, name: "Hydrating Avocado Eye Cream", category: "Eye Cream", price: 30.00, oldPrice: null, discount: null, rating: 4.8, reviews: 204, badge: "BESTSELLER", image: "/eye 5.jpg", description: "Deeply nourishing.", details: "Rich avocado oil keeps the under-eye plump and hydrated."
+    id: 46, name: "Innbeauty Project Extreme Cream Eye", category: "Eye Cream", price: 42.00, oldPrice: null, discount: null, rating: 4.8, reviews: 204, badge: "BESTSELLER", image: "/eye 5.jpg", description: "Firming & contouring eye cream.", details: "With peptides, amino acids + paracress extract. 0.5 FL OZ / 15 ML."
   },
   {
-    id: 47, name: "Snail Mucin Eye Repair", category: "Eye Cream", price: 29.00, oldPrice: null, discount: null, rating: 4.7, reviews: 88, badge: null, image: "/eye 6.jpg", description: "Intense moisture and repair.", details: "Snail secretion filtrate restores elasticity."
+    id: 47, name: "Instant Lift Eye Firming Eye Cream", category: "Eye Cream", price: 29.00, oldPrice: null, discount: null, rating: 4.7, reviews: 88, badge: null, image: "/eye 6.jpg", description: "Instant lift eye firming cream.", details: "Helps target the appearance of under-eye bags, wrinkles, and dark circles. 20ml (0.68 FL OZ)."
   },
   {
-    id: 48, name: "Cooling Cucumber Eye Gel", category: "Eye Cream", price: 24.00, oldPrice: null, discount: null, rating: 4.5, reviews: 130, badge: null, image: "/eye 7.jpg", description: "Soothing and refreshing.", details: "A light gel that feels ice-cold upon application."
+    id: 48, name: "The Inkey List Caffeine Eye Cream", category: "Eye Cream", price: 24.00, oldPrice: null, discount: null, rating: 4.5, reviews: 130, badge: null, image: "/eye 7.jpg", description: "Caffeine eye cream.", details: "Helps reduce the appearance of tired eyes. 0.5 US fl.oz / 15ml."
   },
   {
-    id: 49, name: "Ceramide Barrier Eye Balm", category: "Eye Cream", price: 38.00, oldPrice: 45.00, discount: 15, rating: 4.9, reviews: 175, badge: "SALE", image: "/eye 8.jpg", description: "Protects sensitive skin.", details: "Thick, protective balm for dry winter skin."
+    id: 49, name: "Olay Eyes Ultimate Eye Cream", category: "Eye Cream", price: 30.00, oldPrice: 38.00, discount: 21, rating: 4.9, reviews: 175, badge: "SALE", image: "/eye 8.jpg", description: "Ultimate eye cream.", details: "Instantly reduces the appearance of dark circles, wrinkles, and puffy eyes."
   },
   {
-    id: 50, name: "Luxury Caviar Eye Cream", category: "Eye Cream", price: 85.00, oldPrice: null, discount: null, rating: 5.0, reviews: 42, badge: "NEW", image: "/eye 9.jpg", description: "The ultimate indulgence.", details: "Caviar extract provides unmatched lifting."
+    id: 50, name: "CeraVe Eye Repair Cream", category: "Eye Cream", price: 22.00, oldPrice: null, discount: null, rating: 5.0, reviews: 42, badge: "NEW", image: "/eye 9.jpg", description: "Eye repair cream.", details: "Developed with dermatologists. MVE delivery technology. 0.5 OZ (14.2 g)."
   },
   {
-    id: 51, name: "Hydrogel Eye Patches", category: "Eye Patches", price: 22.00, oldPrice: null, discount: null, rating: 4.8, reviews: 156, badge: "BESTSELLER", image: "/patches1.jpg", description: "Cooling and depuffing.", details: "Contains 60 patches infused with hyaluronic acid."
+    id: 51, name: "The Creme Shop How Do Eye Look? Rested.", category: "Eye Patches", price: 22.00, oldPrice: null, discount: null, rating: 4.8, reviews: 156, badge: "BESTSELLER", image: "/patches1.jpg", description: "Restorative hydrogel under eye patches.", details: "Formulated with retinol, vitamin C, and caffeine for dark circles. Made in Korea. Net wt. 0.14 oz. / 4g."
   },
   {
-    id: 52, name: "Gold Collagen Eye Masks", category: "Eye Patches", price: 28.00, oldPrice: 35.00, discount: 20, rating: 4.9, reviews: 210, badge: "SALE", image: "/patches 2.jpg", description: "Firms and brightens.", details: "24k gold and collagen for maximum anti-aging benefits."
+    id: 52, name: "Numbuzin 9+ NAD+ Collagen Under Eye Patches", category: "Eye Patches", price: 28.00, oldPrice: 35.00, discount: 20, rating: 4.9, reviews: 210, badge: "SALE", image: "/patches 2.jpg", description: "NAD+ collagen under eye patches.", details: "Selfie friendly. Formulated with NAD+, collagen, and 50 peptides."
   },
   {
-    id: 53, name: "Green Tea Soothing Patches", category: "Eye Patches", price: 20.00, oldPrice: null, discount: null, rating: 4.7, reviews: 89, badge: null, image: "/patches 3.jpg", description: "Reduces morning puffiness.", details: "Antioxidant-rich green tea extract wakes up tired eyes."
+    id: 53, name: "Biodance Collagen Peptide Eye Patches", category: "Eye Patches", price: 20.00, oldPrice: null, discount: null, rating: 4.7, reviews: 89, badge: null, image: "/patches 3.jpg", description: "Collagen peptide eye patches.", details: "30 pairs. Net wt. 2.99 oz. / 85g."
   },
   {
-    id: 55, name: "Vitamin C Glow Patches", category: "Eye Patches", price: 24.00, oldPrice: null, discount: null, rating: 4.6, reviews: 92, badge: null, image: "/patches 5.jpg", description: "Brightens dark circles.", details: "Infused with Vitamin C and niacinamide for a luminous finish."
+    id: 54, name: "Biodance Caviar PDRN Eye Patches", category: "Eye Patches", price: 22.00, oldPrice: null, discount: null, rating: 4.8, reviews: 95, badge: "NEW", image: "/patches 4.jpg", description: "Caviar PDRN eye patches.", details: "30 pairs. Net wt. 2.99 oz. / 85g."
+  },
+  {
+    id: 55, name: "Gush Skin Play Tired AF", category: "Eye Patches", price: 24.00, oldPrice: null, discount: null, rating: 4.6, reviews: 92, badge: null, image: "/patches 5.jpg", description: "Calming reusable undereye patches.", details: "Revives and rejuvenates with a glow seal."
   }
 ];

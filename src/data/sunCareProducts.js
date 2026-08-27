@@ -1,7 +1,7 @@
 export const sunCareProducts = [
   {
     "id": 101,
-    "name": "Face Sunscreen 1",
+    "name": "SUNPLUS FACE + BODY SUNSCREEN",
     "category": "Face",
     "price": 31,
     "oldPrice": null,
@@ -10,12 +10,12 @@ export const sunCareProducts = [
     "reviews": 110,
     "badge": "BESTSELLER",
     "image": "/sunscreen1.jpg",
-    "description": "High performance face sunscreen number 1.",
-    "details": "Broad spectrum protection with a lightweight feel."
+    "description": "Broad spectrum SPF 30 with organic skin nourishing ingredients.",
+    "details": "Sweat and water resistant for 80 minutes. Includes evening primrose, shea butter, raspberry, jojoba, and aloe."
   },
   {
     "id": 102,
-    "name": "Face Sunscreen 2",
+    "name": "LA ROCHE-POSAY ANTHELIOS UVMUNE 400",
     "category": "Face",
     "price": 32,
     "oldPrice": null,
@@ -24,12 +24,12 @@ export const sunCareProducts = [
     "reviews": 120,
     "badge": "NEW",
     "image": "/sunscreen2.jpg",
-    "description": "High performance face sunscreen number 2.",
-    "details": "Broad spectrum protection with a lightweight feel."
+    "description": "Oil control gel-cream with SPF 50+.",
+    "details": "Provides very high protection with ultra long-UVA filters and antioxidant benefits."
   },
   {
     "id": 103,
-    "name": "Face Sunscreen 3",
+    "name": "PlantsDiary Soothiy",
     "category": "Face",
     "price": 33,
     "oldPrice": 40,
@@ -38,12 +38,12 @@ export const sunCareProducts = [
     "reviews": 130,
     "badge": null,
     "image": "/sunscreen3.jpg",
-    "description": "High performance face sunscreen number 3.",
-    "details": "Broad spectrum protection with a lightweight feel."
+    "description": "Dermatitis care broad spectrum SPF 50.",
+    "details": "Provides PA+++ sun protection."
   },
   {
     "id": 104,
-    "name": "Face Sunscreen 4",
+    "name": "trilogy Omega-Boost Sheer Mineral Sunscreen",
     "category": "Face",
     "price": 34,
     "oldPrice": null,
@@ -52,12 +52,12 @@ export const sunCareProducts = [
     "reviews": 140,
     "badge": null,
     "image": "/sunscreen4.jpg",
-    "description": "High performance face sunscreen number 4.",
-    "details": "Broad spectrum protection with a lightweight feel."
+    "description": "Reef friendly SPF 60+ mineral sunscreen.",
+    "details": "Broad spectrum water-resistant for 80 minutes. Made from 100% natural origin ingredients."
   },
   {
     "id": 105,
-    "name": "Face Sunscreen 5",
+    "name": "skin proud serious shade",
     "category": "Face",
     "price": 30,
     "oldPrice": null,
@@ -66,12 +66,12 @@ export const sunCareProducts = [
     "reviews": 150,
     "badge": null,
     "image": "/sunscreen5.jpg",
-    "description": "High performance face sunscreen number 5.",
-    "details": "Broad spectrum protection with a lightweight feel."
+    "description": "Lightweight hydrating SPF 50+ skin serum.",
+    "details": "Formulated with restoring ceramide and antioxidant spirulina for very high UVA/UVB protection."
   },
   {
     "id": 106,
-    "name": "Face Sunscreen 6",
+    "name": "amiin by idraet",
     "category": "Face",
     "price": 31,
     "oldPrice": 40,
@@ -80,12 +80,12 @@ export const sunCareProducts = [
     "reviews": 160,
     "badge": null,
     "image": "/sunscreen6.jpg",
-    "description": "High performance face sunscreen number 6.",
-    "details": "Broad spectrum protection with a lightweight feel."
+    "description": "Sunscreen emulsion FPS 50.",
+    "details": "Provides protection against UVB, UVA, blue light, and IR rays."
   },
   {
     "id": 107,
-    "name": "Face Sunscreen 7",
+    "name": "JARSKING SUNSCREEN",
     "category": "Face",
     "price": 32,
     "oldPrice": null,
@@ -94,12 +94,12 @@ export const sunCareProducts = [
     "reviews": 170,
     "badge": null,
     "image": "/sunscreen7.jpg",
-    "description": "High performance face sunscreen number 7.",
-    "details": "Broad spectrum protection with a lightweight feel."
+    "description": "Commuter AM+PM light and smooth sunscreen.",
+    "details": "All-day wear with SPF 50+ protection."
   },
   {
     "id": 108,
-    "name": "Face Sunscreen 8",
+    "name": "TOCOBO Cotton Soft Sun Stick",
     "category": "Face",
     "price": 33,
     "oldPrice": null,
@@ -108,12 +108,12 @@ export const sunCareProducts = [
     "reviews": 180,
     "badge": null,
     "image": "/sunscreen8.jpg",
-    "description": "High performance face sunscreen number 8.",
-    "details": "Broad spectrum protection with a lightweight feel."
+    "description": "Cotton soft SPF50+ PA++++ sun stick.",
+    "details": "Easy-to-apply solid sunscreen stick for on-the-go protection."
   },
   {
     "id": 109,
-    "name": "Face Sunscreen 9",
+    "name": "Supergoop! PLAY Everyday Sunscreen Stick",
     "category": "Face",
     "price": 34,
     "oldPrice": 40,
@@ -122,12 +122,12 @@ export const sunCareProducts = [
     "reviews": 190,
     "badge": null,
     "image": "/sunscreen9.jpg",
-    "description": "High performance face sunscreen number 9.",
-    "details": "Broad spectrum protection with a lightweight feel."
+    "description": "Broad spectrum SPF 50 PA++++ sunscreen stick.",
+    "details": "Water and sweat resistant for up to 80 minutes. Easy application."
   },
   {
     "id": 110,
-    "name": "Face Sunscreen 10",
+    "name": "CeraVe Hydrating Mineral Sunscreen",
     "category": "Face",
     "price": 30,
     "oldPrice": null,
@@ -136,12 +136,12 @@ export const sunCareProducts = [
     "reviews": 200,
     "badge": null,
     "image": "/sunscreen10.jpg",
-    "description": "High performance face sunscreen number 10.",
-    "details": "Broad spectrum protection with a lightweight feel."
+    "description": "Broad spectrum SPF 30 with medium sheer tint.",
+    "details": "Blends seamlessly into skin with a lightweight, non-greasy feel. Formulated with 3 essential ceramides & niacinamide."
   },
   {
     "id": 111,
-    "name": "Face Sunscreen 11",
+    "name": "DOT & KEY Strawberry Dew Tinted Sunscreen",
     "category": "Face",
     "price": 31,
     "oldPrice": null,
@@ -150,12 +150,12 @@ export const sunCareProducts = [
     "reviews": 210,
     "badge": null,
     "image": "/sunscreen11.jpg",
-    "description": "High performance face sunscreen number 11.",
-    "details": "Broad spectrum protection with a lightweight feel."
+    "description": "Daily wear SPF 50+ PA+++ tinted sunscreen.",
+    "details": "01 Porcelain shade in a 50ml bottle."
   },
   {
     "id": 112,
-    "name": "Face Sunscreen 12",
+    "name": "Kosas DreamBeam",
     "category": "Face",
     "price": 32,
     "oldPrice": 40,
@@ -164,12 +164,12 @@ export const sunCareProducts = [
     "reviews": 220,
     "badge": null,
     "image": "/sunscreen12.jpg",
-    "description": "High performance face sunscreen number 12.",
-    "details": "Broad spectrum protection with a lightweight feel."
+    "description": "Comfy smooth sunscreen with broad spectrum SPF 40.",
+    "details": "Tinted formula that offers a smooth, comfortable finish on the skin."
   },
   {
     "id": 113,
-    "name": "Face Sunscreen 13",
+    "name": "COOLA Clear Sunscreen Spray Tropical Coconut",
     "category": "Face",
     "price": 33,
     "oldPrice": null,
@@ -178,12 +178,12 @@ export const sunCareProducts = [
     "reviews": 230,
     "badge": null,
     "image": "/sunscreen13.jpg",
-    "description": "High performance face sunscreen number 13.",
-    "details": "Broad spectrum protection with a lightweight feel."
+    "description": "Broad spectrum SPF 30 spray with 70%+ organic ingredients.",
+    "details": "Provides weightless hydration and is water resistant for 80 minutes."
   },
   {
     "id": 114,
-    "name": "Face Sunscreen 14",
+    "name": "Sunscreen Spray SPF 50+ PA++++",
     "category": "Face",
     "price": 34,
     "oldPrice": null,
@@ -192,12 +192,12 @@ export const sunCareProducts = [
     "reviews": 240,
     "badge": null,
     "image": "/sunscreen14.jpg",
-    "description": "High performance face sunscreen number 14.",
-    "details": "Broad spectrum protection with a lightweight feel."
+    "description": "Hydrating and refreshing sunscreen spray for face & body.",
+    "details": "Invisible and non-greasy broad spectrum UVA/UVB protection. Contains anti-aging, moisturizing, and whitening properties."
   },
   {
     "id": 115,
-    "name": "Face Sunscreen 15",
+    "name": "moha: Sunscreen Spray",
     "category": "Face",
     "price": 30,
     "oldPrice": 40,
@@ -206,12 +206,12 @@ export const sunCareProducts = [
     "reviews": 250,
     "badge": null,
     "image": "/sunscreen15.jpg",
-    "description": "High performance face sunscreen number 15.",
-    "details": "Broad spectrum protection with a lightweight feel."
+    "description": "Broad spectrum UVA/UVB protection SPF 50 PA+++.",
+    "details": "Formulated with the goodness of rice bran oil. Dermatologically tested, non-greasy, and free of oxybenzone, homosalate, silicone, and parabens."
   },
   {
     "id": 116,
-    "name": "Body Sunscreen 1",
+    "name": "Sun Scoop Sunscreen Body Lotion",
     "category": "Body",
     "price": 26,
     "oldPrice": null,
@@ -220,40 +220,40 @@ export const sunCareProducts = [
     "reviews": 85,
     "badge": "BESTSELLER",
     "image": "/body 1.jpg",
-    "description": "Nourishing body sunscreen number 1.",
-    "details": "Water resistant and easily absorbed."
+    "description": "Daily moisture SPF 50+ PA++++ with 5% niacinamide.",
+    "details": "Lightweight and non-greasy broad spectrum UVA/UVB protection for all skin types."
   },
   {
     "id": 117,
-    "name": "Body Sunscreen 2",
+    "name": "WishCare Sunscreen Body Lotion",
     "category": "Body",
     "price": 27,
     "oldPrice": null,
     "discount": null,
-    "rating": 4.5,
+    "rating": 4.6,
     "reviews": 90,
     "badge": null,
     "image": "/body 2.jpg",
-    "description": "Nourishing body sunscreen number 2.",
-    "details": "Water resistant and easily absorbed."
+    "description": "Broad spectrum SPF 50+ PA++++ body lotion.",
+    "details": "Formulated with niacinamide, ceramides, oats extract, and hyaluronic acid to brighten and nourish."
   },
   {
     "id": 118,
-    "name": "Body Sunscreen 3",
+    "name": "SADOER Sunscreen Lotion",
     "category": "Body",
     "price": 28,
     "oldPrice": null,
     "discount": null,
-    "rating": 4.5,
+    "rating": 4.4,
     "reviews": 95,
     "badge": null,
     "image": "/body 3.jpg",
-    "description": "Nourishing body sunscreen number 3.",
-    "details": "Water resistant and easily absorbed."
+    "description": "Moisturizing sunscreen lotion FPS 90+ SPF PA++++.",
+    "details": "Refreshing, non-greasy, sweat-proof UVA/UVB protection with aloe and vitamin E."
   },
   {
     "id": 119,
-    "name": "Body Sunscreen 4",
+    "name": "SUNSCREEN LOTION",
     "category": "Body",
     "price": 29,
     "oldPrice": null,
@@ -262,82 +262,82 @@ export const sunCareProducts = [
     "reviews": 100,
     "badge": null,
     "image": "/body4.jpg",
-    "description": "Nourishing body sunscreen number 4.",
-    "details": "Water resistant and easily absorbed."
+    "description": "Broad spectrum UVA/UVB protection SPF 50+ PA+++.",
+    "details": "Lightweight, fast, and non-greasy lotion for all skin types. 100 ml."
   },
   {
     "id": 120,
-    "name": "Body Sunscreen 5",
+    "name": "Sun Bum Daily Body",
     "category": "Body",
     "price": 25,
     "oldPrice": null,
     "discount": null,
-    "rating": 4.5,
+    "rating": 4.7,
     "reviews": 105,
     "badge": null,
     "image": "/body5.jpg",
-    "description": "Nourishing body sunscreen number 5.",
-    "details": "Water resistant and easily absorbed."
+    "description": "Sunscreen moisturizing lotion SPF 50.",
+    "details": "Provides 24-hour moisture, antioxidants, and Vitamin E. Water resistant for 80 minutes."
   },
   {
     "id": 121,
-    "name": "Body Sunscreen 6",
+    "name": "NIVEA SUN protect & hidrata",
     "category": "Body",
     "price": 26,
     "oldPrice": null,
     "discount": null,
-    "rating": 4.5,
+    "rating": 4.6,
     "reviews": 110,
     "badge": null,
     "image": "/body6.jpg",
-    "description": "Nourishing body sunscreen number 6.",
-    "details": "Water resistant and easily absorbed."
+    "description": "Very high UVA/UVB protection FPS 70.",
+    "details": "Oil-free formula with panthenol for body and face. Fast absorption."
   },
   {
     "id": 122,
-    "name": "Body Sunscreen 7",
+    "name": "Vaseline HEALTHY BRIGHT sun protect",
     "category": "Body",
     "price": 27,
     "oldPrice": null,
     "discount": null,
-    "rating": 4.5,
+    "rating": 4.8,
     "reviews": 115,
     "badge": null,
     "image": "/body7.jpg",
-    "description": "Nourishing body sunscreen number 7.",
-    "details": "Water resistant and easily absorbed."
+    "description": "Serum in lotion SPF 30 PA+++.",
+    "details": "UVA and UVB protection for all skin types in a 600ml bottle."
   },
   {
     "id": 123,
-    "name": "Body Sunscreen 8",
+    "name": "Supergoop! PLAY Everyday Lotion",
     "category": "Body",
     "price": 28,
     "oldPrice": null,
     "discount": null,
-    "rating": 4.5,
+    "rating": 4.9,
     "reviews": 120,
     "badge": null,
     "image": "/body8.jpg",
-    "description": "Nourishing body sunscreen number 8.",
-    "details": "Water resistant and easily absorbed."
+    "description": "Broad spectrum sunscreen SPF 50 PA++++.",
+    "details": "Water resistant for 80 minutes. Formulated with sunflower extract."
   },
   {
     "id": 124,
-    "name": "Kids Sunscreen 1",
+    "name": "NIVEA SUN kids sensitive protect",
     "category": "Kids",
     "price": 21,
     "oldPrice": null,
     "discount": null,
-    "rating": 4.8,
+    "rating": 4.9,
     "reviews": 165,
     "badge": "NEW",
     "image": "/kids1.jpg",
-    "description": "Gentle kids sunscreen number 1.",
-    "details": "Tear-free and pediatrician tested."
+    "description": "5 in 1 sensitive skin protection SPF 50+.",
+    "details": "Extra water resistant and paediatrically approved for children's delicate skin."
   },
   {
     "id": 125,
-    "name": "Kids Sunscreen 2",
+    "name": "mamaearth Vitamin C Daily Glow Sunscreen",
     "category": "Kids",
     "price": 22,
     "oldPrice": null,
@@ -346,26 +346,26 @@ export const sunCareProducts = [
     "reviews": 180,
     "badge": null,
     "image": "/kids2.jpg",
-    "description": "Gentle kids sunscreen number 2.",
-    "details": "Tear-free and pediatrician tested."
+    "description": "Sun protection & glow with SPF 50 PA+++.",
+    "details": "Formulated with vitamin C & turmeric. Water resistant and suitable for sensitive skin types. 80g."
   },
   {
     "id": 126,
-    "name": "Kids Sunscreen 3",
+    "name": "Naturix pure care KIDS SUN CARE LOTION",
     "category": "Kids",
     "price": 23,
     "oldPrice": null,
     "discount": null,
-    "rating": 4.8,
+    "rating": 4.7,
     "reviews": 195,
     "badge": null,
     "image": "/kids3.jpg",
-    "description": "Gentle kids sunscreen number 3.",
-    "details": "Tear-free and pediatrician tested."
+    "description": "Broad spectrum filter 50+ SPF PA+++ for kids.",
+    "details": "For sensitive skin of children. Enriched with shea butter, vitamin E, and panthenol. Water resistant."
   },
   {
     "id": 127,
-    "name": "Kids Sunscreen 4",
+    "name": "SKY & SOL FOR Kids and Babies",
     "category": "Kids",
     "price": 20,
     "oldPrice": null,
@@ -374,54 +374,54 @@ export const sunCareProducts = [
     "reviews": 210,
     "badge": null,
     "image": "/kids4.jpg",
-    "description": "Gentle kids sunscreen number 4.",
-    "details": "Tear-free and pediatrician tested."
+    "description": "Natural sunscreen face & body SPF 50.",
+    "details": "Non-greasy 100% grass-fed tallow & jojoba complex. Water resistant for 80 minutes. 3 oz."
   },
   {
     "id": 128,
-    "name": "Kids Sunscreen 5",
+    "name": "Coppertone Water Babies",
     "category": "Kids",
     "price": 21,
     "oldPrice": null,
     "discount": null,
-    "rating": 4.8,
+    "rating": 4.9,
     "reviews": 225,
     "badge": null,
     "image": "/kids5.jpg",
-    "description": "Gentle kids sunscreen number 5.",
-    "details": "Tear-free and pediatrician tested."
+    "description": "SPF 50 sunscreen spray for babies.",
+    "details": "Easy spray format for quick application on children's sensitive skin."
   },
   {
     "id": 129,
-    "name": "Kids Sunscreen 6",
+    "name": "Aqualogica radiance+ oil control",
     "category": "Kids",
     "price": 22,
     "oldPrice": null,
     "discount": null,
-    "rating": 4.8,
+    "rating": 4.6,
     "reviews": 240,
     "badge": null,
     "image": "/kids6.jpg",
-    "description": "Gentle kids sunscreen number 6.",
-    "details": "Tear-free and pediatrician tested."
+    "description": "Fluid sunscreen SPF 50+ PA++++ with watermelon & niacinamide.",
+    "details": "Provides UVA/UVB and blue light protection with unique water lock technology. 50g."
   },
   {
     "id": 130,
-    "name": "Kids Sunscreen 7",
+    "name": "LA ROCHE-POSAY ANTHELIOS dermo-pediatrics",
     "category": "Kids",
     "price": 23,
     "oldPrice": null,
     "discount": null,
-    "rating": 4.8,
+    "rating": 4.9,
     "reviews": 255,
     "badge": null,
     "image": "/kids7.jpg",
-    "description": "Gentle kids sunscreen number 7.",
-    "details": "Tear-free and pediatrician tested."
+    "description": "Very high protection SPF 50+ lotion for children.",
+    "details": "Specially formulated for children's sensitive skin with La Roche-Posay thermal spring water."
   },
   {
     "id": 131,
-    "name": "Kids Sunscreen 8",
+    "name": "Eucerin Sun Protection KIDS SUN LOTION",
     "category": "Kids",
     "price": 20,
     "oldPrice": null,
@@ -430,7 +430,7 @@ export const sunCareProducts = [
     "reviews": 270,
     "badge": null,
     "image": "/kids8.jpg",
-    "description": "Gentle kids sunscreen number 8.",
-    "details": "Tear-free and pediatrician tested."
+    "description": "Very high UVB+UVA 50+ protection.",
+    "details": "Protects from sunburn and reduces the risk of long-term UV skin damage."
   }
 ];
