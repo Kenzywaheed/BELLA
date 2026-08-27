@@ -47,7 +47,7 @@ a, button, .icon-btn, .category-btn, .auth-btn, .product-card-link, select, inpu
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 2rem;
+  padding: 0;
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
   animation-delay: 0.5s;
@@ -62,7 +62,7 @@ a, button, .icon-btn, .category-btn, .auth-btn, .product-card-link, select, inpu
 /* Navbar */
 .navbar {
   width: 100%;
-  padding: 1rem 0 1rem 0;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -226,8 +226,6 @@ a, button, .icon-btn, .category-btn, .auth-btn, .product-card-link, select, inpu
 .hero-section {
   width: 100%;
   height: 450px;
-  margin: 0;
-  padding: 0;
   overflow: hidden;
 }
 
@@ -235,20 +233,6 @@ a, button, .icon-btn, .category-btn, .auth-btn, .product-card-link, select, inpu
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
-  object-position: center;
-}
-
-.hero-section {
-  width: 100%;
-  height: 450px;
-  margin-top: 70px;
-  overflow: hidden;
-}
-
-.hero-section .hero {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
   object-position: center;
 }
@@ -664,11 +648,84 @@ a, button, .icon-btn, .category-btn, .auth-btn, .product-card-link, select, inpu
   opacity: 0.5;
 }
 
+.mobile-only-link {
+  display: none;
+}
+
+.mobile-subheader {
+  display: none;
+}
+
 /* Responsive adjustments */
+.hamburger-menu {
+  display: none;
+}
+
 @media (max-width: 768px) {
-  .nav-links {
+  .navbar {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    margin-right: 0.5rem;
+  }
+
+  .mobile-subheader {
+    display: flex;
+    width: 100%;
+    padding: 0 1rem 1rem 1rem;
+    justify-content: flex-start;
+  }
+
+  .back-btn-under {
+    background: none;
+    border: none;
+    color: #F53C44;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+
+  .back-btn-under:hover {
+    opacity: 0.7;
+  }
+
+  /* Hide greeting and desktop auth links on mobile to save space */
+  .auth-link.hide-on-mobile,
+  .auth-btn.hide-on-mobile,
+  .icon-btn.hide-on-mobile {
     display: none;
-    /* Hide top nav links on mobile for now */
+  }
+
+  .mobile-only-link {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    gap: 1.5rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 99;
+  }
+
+  .nav-links.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 
   .section-title {
@@ -683,6 +740,33 @@ a, button, .icon-btn, .category-btn, .auth-btn, .product-card-link, select, inpu
 
   .footer-statement {
     font-size: 1.5rem;
+  }
+
+  /* Padding & Layout adjustments for responsive */
+  .about-section {
+    padding: 4rem 1rem;
+  }
+
+  .reviews-section, .policy-section, .footer-section {
+    padding: 4rem 1rem 1rem 1rem;
+  }
+
+  .hero-section {
+    height: 60vh;
+    min-height: 400px;
+    margin-top: 0;
+  }
+
+  .policy-grid {
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .review-card {
+    width: 85vw;
+    padding: 1.5rem;
   }
 }
 

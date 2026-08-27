@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import AuthModal from './AuthModal';
 import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
@@ -8,6 +8,11 @@ import { useWishlist } from '../context/WishlistContext';
 function Navbar() {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const [authView, setAuthView] = useState('login');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  
+  const closeMobileMenu = () => setIsMobileMenuOpen(false);
   const { currentUser, logout } = useAuth();
   const { totalItems, setIsCartOpen } = useCart();
   const { wishlistItems } = useWishlist();
@@ -21,33 +26,50 @@ function Navbar() {
     <>
       <header className="navbar">
         <div className="logo-container">
+          <button className="icon-btn hamburger-menu" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Menu">
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+             </svg>
+          </button>
           <Link to="/">
             <img src="/bella-removebg-preview.png" alt="Bella Logo" className="logo" />
           </Link>
         </div>
 
         <nav className="center-nav">
-          <ul className="nav-links">
-            <li><Link to="/face-care">Face Care</Link></li>
-            <li><Link to="/sun-care">Sun Care</Link></li>
-            <li><Link to="/body-care">Body Care</Link></li>
-            <li><Link to="/hair-care">Hair Care</Link></li>
-            <li><Link to="/quiz" style={{ color: '#F53C44', fontWeight: 600 }}>Quiz</Link></li>
+          <ul className={`nav-links ${isMobileMenuOpen ? 'open' : ''}`}>
+            <li><Link to="/face-care" onClick={closeMobileMenu}>Face Care</Link></li>
+            <li><Link to="/sun-care" onClick={closeMobileMenu}>Sun Care</Link></li>
+            <li><Link to="/body-care" onClick={closeMobileMenu}>Body Care</Link></li>
+            <li><Link to="/hair-care" onClick={closeMobileMenu}>Hair Care</Link></li>
+            <li><Link to="/quiz" onClick={closeMobileMenu}>Quiz</Link></li>
+            
+            {/* Mobile Auth Links */}
+            {currentUser ? (
+              <li className="mobile-only-link"><Link to="#" onClick={(e) => { e.preventDefault(); logout(); closeMobileMenu(); }}>Logout</Link></li>
+            ) : (
+              <>
+                <li className="mobile-only-link"><Link to="#" onClick={(e) => { e.preventDefault(); openModal('login'); closeMobileMenu(); }}>Login</Link></li>
+                <li className="mobile-only-link"><Link to="#" onClick={(e) => { e.preventDefault(); openModal('register'); closeMobileMenu(); }}>Register</Link></li>
+              </>
+            )}
           </ul>
         </nav>
 
         <div className="right-nav">
           {currentUser ? (
             <>
-              <span className="auth-link">Hi, {currentUser.firstName || 'User'}</span>
-              <button onClick={logout} className="icon-btn" aria-label="Logout" title="Logout">
+              <span className="auth-link hide-on-mobile">Hi, {currentUser.firstName || 'User'}</span>
+              <button onClick={logout} className="icon-btn hide-on-mobile" aria-label="Logout" title="Logout">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
               </button>
             </>
           ) : (
             <>
-              <a href="#login" className="auth-link" onClick={(e) => { e.preventDefault(); openModal('login'); }}>Login</a>
-              <a href="#register" className="auth-btn" onClick={(e) => { e.preventDefault(); openModal('register'); }}>Register</a>
+              <a href="#login" className="auth-link hide-on-mobile" onClick={(e) => { e.preventDefault(); openModal('login'); }}>Login</a>
+              <a href="#register" className="auth-btn hide-on-mobile" onClick={(e) => { e.preventDefault(); openModal('register'); }}>Register</a>
             </>
           )}
         <Link to="/wishlist" className="icon-btn wishlist-icon-btn" aria-label="Wishlist">
@@ -67,6 +89,17 @@ function Navbar() {
         </button>
       </div>
     </header>
+    
+    {location.pathname !== '/' && (
+      <div className="mobile-subheader">
+        <button className="back-btn-under" onClick={() => navigate(-1)} aria-label="Go Back">
+           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+           </svg>
+        </button>
+      </div>
+    )}
     
     <AuthModal 
       isOpen={isAuthModalOpen} 
