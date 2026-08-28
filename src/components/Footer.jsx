@@ -9,16 +9,7 @@ function Footer() {
           <img src="/bella-removebg-preview.png" alt="Bella Logo" className="footer-logo" />
         </div>
 
-        <nav className="footer-nav">
-          <ul className="footer-links">
-            <li><Link to="/face-care">Face Care</Link></li>
-            <li><Link to="/sun-care">Sun Care</Link></li>
-            <li><Link to="/body-care">Body Care</Link></li>
-            <li><Link to="/hair-care">Hair Care</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-          </ul>
-        </nav>
+
 
         <div className="footer-statement">
           <p>Take time for yourself.</p>
