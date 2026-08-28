@@ -9,6 +9,10 @@ export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+  const [authView, setAuthView] = useState('login');
+  const [pendingAction, setPendingAction] = useState(null);
+
   useEffect(() => {
     // Check if user is logged in on mount
     const fetchUser = async () => {
@@ -49,12 +53,29 @@ export const AuthProvider = ({ children }) => {
     setCurrentUser(null);
   };
 
+  const openModal = (view = 'login') => {
+    setAuthView(view);
+    setIsAuthModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsAuthModalOpen(false);
+    setPendingAction(null); // Clear any pending actions if modal is closed without login
+  };
+
   const value = {
     currentUser,
     login,
     register,
     logout,
-    loading
+    loading,
+    isAuthModalOpen,
+    authView,
+    setAuthView,
+    openModal,
+    closeModal,
+    pendingAction,
+    setPendingAction
   };
 
   return (

@@ -1,26 +1,18 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import AuthModal from './AuthModal';
 import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
 import { useWishlist } from '../context/WishlistContext';
 
 function Navbar() {
-  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
-  const [authView, setAuthView] = useState('login');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
-  const { currentUser, logout } = useAuth();
+  const { currentUser, logout, openModal } = useAuth();
   const { totalItems, setIsCartOpen } = useCart();
   const { wishlistItems } = useWishlist();
-
-  const openModal = (view) => {
-    setAuthView(view);
-    setIsAuthModalOpen(true);
-  };
 
   return (
     <>
@@ -98,12 +90,6 @@ function Navbar() {
         </button>
       </div>
     )}
-    
-    <AuthModal 
-      isOpen={isAuthModalOpen} 
-      onClose={() => setIsAuthModalOpen(false)} 
-      initialView={authView} 
-    />
   </>
   );
 }

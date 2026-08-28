@@ -1,11 +1,13 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { useToast } from './ToastContext';
+import { useAuth } from './AuthContext';
 
 const CartContext = createContext();
 
 export const useCart = () => useContext(CartContext);
 
 export const CartProvider = ({ children }) => {
+  const { currentUser, openModal, setPendingAction } = useAuth();
   const { showToast } = useToast();
   const [cartItems, setCartItems] = useState(() => {
     const savedCart = localStorage.getItem('bella_cart');
@@ -19,6 +21,25 @@ export const CartProvider = ({ children }) => {
   }, [cartItems]);
 
   const addToCart = (product) => {
+    if (!currentUser) {
+      showToast('Please login first to add items to your cart', 'info');
+      setPendingAction(() => () => {
+        setCartItems(prev => {
+          const existing = prev.find(item => item.id === product.id);
+          if (existing) {
+            return prev.map(item => 
+              item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+            );
+          }
+          return [...prev, { ...product, quantity: 1 }];
+        });
+        setIsCartOpen(true);
+        showToast(`Added ${product.name} to your cart`);
+      });
+      openModal('login');
+      return;
+    }
+
     setCartItems(prev => {
       const existing = prev.find(item => item.id === product.id);
       if (existing) {

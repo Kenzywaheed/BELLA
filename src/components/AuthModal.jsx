@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import '../index.css'; // ensure styles are imported if needed
 
-function AuthModal({ isOpen, onClose, initialView = 'login' }) {
-  const { login, register } = useAuth();
-  const [view, setView] = useState(initialView);
+function AuthModal() {
+  const { login, register, isAuthModalOpen, authView, setAuthView, closeModal, pendingAction, setPendingAction } = useAuth();
   
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -17,8 +16,7 @@ function AuthModal({ isOpen, onClose, initialView = 'login' }) {
 
   // Reset state when modal opens or view changes
   useEffect(() => {
-    if (isOpen) {
-      setView(initialView);
+    if (isAuthModalOpen) {
       setError('');
       setEmail('');
       setPassword('');
@@ -26,9 +24,9 @@ function AuthModal({ isOpen, onClose, initialView = 'login' }) {
       setLastName('');
       setConfirmPassword('');
     }
-  }, [isOpen, initialView]);
+  }, [isAuthModalOpen, authView]);
 
-  if (!isOpen) return null;
+  if (!isAuthModalOpen) return null;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -36,10 +34,14 @@ function AuthModal({ isOpen, onClose, initialView = 'login' }) {
     setLoading(true);
 
     try {
-      if (view === 'login') {
+      if (authView === 'login') {
         await login({ email, password });
-        onClose();
-      } else if (view === 'register') {
+        if (pendingAction) {
+          pendingAction();
+          setPendingAction(null);
+        }
+        closeModal();
+      } else if (authView === 'register') {
         if (password !== confirmPassword) {
           setError("Passwords do not match");
           setLoading(false);
@@ -47,12 +49,12 @@ function AuthModal({ isOpen, onClose, initialView = 'login' }) {
         }
         await register({ firstName, lastName, email, password });
         // Optionally switch to login or close and auto-login
-        setView('login');
-      } else if (view === 'forgotPassword') {
+        setAuthView('login');
+      } else if (authView === 'forgotPassword') {
         // Implement forgot password call here
         // await forgotPassword(email);
         alert('Password reset link sent to ' + email);
-        setView('login');
+        setAuthView('login');
       }
     } catch (err) {
       setError(err.response?.data?.message || 'An error occurred. Please try again.');
@@ -62,20 +64,20 @@ function AuthModal({ isOpen, onClose, initialView = 'login' }) {
   };
 
   return (
-    <div className="modal-overlay" onClick={onClose}>
+    <div className="modal-overlay" onClick={closeModal}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose}>&times;</button>
+        <button className="modal-close" onClick={closeModal}>&times;</button>
         
         <h2 className="modal-title">
-          {view === 'login' && 'Welcome Back'}
-          {view === 'register' && 'Create an Account'}
-          {view === 'forgotPassword' && 'Reset Password'}
+          {authView === 'login' && 'Welcome Back'}
+          {authView === 'register' && 'Create an Account'}
+          {authView === 'forgotPassword' && 'Reset Password'}
         </h2>
 
         {error && <div className="modal-error">{error}</div>}
 
         <form onSubmit={handleSubmit} className="modal-form">
-          {view === 'register' && (
+          {authView === 'register' && (
             <div className="form-row">
               <div className="form-group">
                 <label>First Name</label>
@@ -93,36 +95,36 @@ function AuthModal({ isOpen, onClose, initialView = 'login' }) {
             <input type="email" value={email} onChange={e => setEmail(e.target.value)} required />
           </div>
 
-          {view !== 'forgotPassword' && (
+          {authView !== 'forgotPassword' && (
             <div className="form-group">
               <label>Password</label>
               <input type="password" value={password} onChange={e => setPassword(e.target.value)} required />
             </div>
           )}
 
-          {view === 'register' && (
+          {authView === 'register' && (
             <div className="form-group">
               <label>Confirm Password</label>
               <input type="password" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} required />
             </div>
           )}
 
-          {view === 'login' && (
-            <div className="forgot-password-link" onClick={() => setView('forgotPassword')}>
+          {authView === 'login' && (
+            <div className="forgot-password-link" onClick={() => setAuthView('forgotPassword')}>
               Forgot Password?
             </div>
           )}
 
           <button type="submit" className="submit-btn" disabled={loading}>
-            {loading ? 'Processing...' : (view === 'login' ? 'Sign In' : view === 'register' ? 'Sign Up' : 'Send Link')}
+            {loading ? 'Processing...' : (authView === 'login' ? 'Sign In' : authView === 'register' ? 'Sign Up' : 'Send Link')}
           </button>
         </form>
 
         <div className="modal-footer">
-          {view === 'login' ? (
-            <p>Don't have an account? <span onClick={() => setView('register')}>Register here</span></p>
+          {authView === 'login' ? (
+            <p>Don't have an account? <span onClick={() => setAuthView('register')}>Register here</span></p>
           ) : (
-            <p>Already have an account? <span onClick={() => setView('login')}>Log in</span></p>
+            <p>Already have an account? <span onClick={() => setAuthView('login')}>Log in</span></p>
           )}
         </div>
       </div>

@@ -13,6 +13,7 @@ import Wishlist from './pages/Wishlist';
 import SkincareQuiz from './pages/SkincareQuiz';
 import CartDrawer from './components/CartDrawer';
 import Toast from './components/Toast';
+import AuthModal from './components/AuthModal';
 import './index.css';
 
 function App() {
@@ -76,6 +77,7 @@ function App() {
           <Footer />
           <CartDrawer />
           <Toast />
+          <AuthModal />
         </main>
       )}
     </>
