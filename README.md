@@ -35,6 +35,31 @@ A modern, elegant e-commerce platform for skincare and beauty products. BELLA of
   - Authentication context
   - Toast notifications
 
+## 🔒 Protected Actions (Non-Invasive Flow)
+
+BELLA uses a non-invasive, event-driven architecture to intercept actions that require authentication (like "Add to Cart" or "Add to Wishlist") without polluting core context APIs.
+
+**Behavior:**
+1. User clicks an action (e.g., Add to Cart) while logged out.
+2. The `useProtectedAction` hook intercepts it, stores the pending action in `sessionStorage`, and dispatches an `'open-auth-modal'` CustomEvent.
+3. The `<Navbar />` listens to the event and triggers the Auth modal.
+4. Upon successful login, `<Navbar />` automatically calls `resumePendingAction()` to read from storage and execute the queued action instantly.
+
+**Storage Shape (`sessionStorage['bella_pending_action']`):**
+```json
+{
+  "type": "ADD_TO_CART",
+  "payload": { "id": "prod-1", "name": "Cream" },
+  "createdAt": 1700000000000
+}
+```
+
+**Testing Scenarios (Unit/Integration):**
+- *TTL Expiry*: Mock `createdAt` to >1 hour ago. Verify action is discarded.
+- *Duplicate Execution*: Verify `sessionStorage.removeItem` is called *before* execution to prevent React strict-mode double firing.
+- *Bypass*: Verify logged-in users trigger the action synchronously without modal overhead.
+- *Cancel Modal*: Verify closing the modal simply leaves the action in storage until TTL expires or login occurs later.
+
 ## 🛠️ Tech Stack
 
 - **Frontend Framework:** React 19.2.8

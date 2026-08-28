@@ -84,7 +84,7 @@ function CarePage() {
   return (
     <div className="face-care-page page-transition">
       <div className="page-hero">
-        <h1 className="page-title"> CARE</h1>
+        <h1 className="page-title">BODY CARE</h1>
         <p className="page-subtitle">Luxurious formulations for head-to-toe radiance.</p>
       </div>
 

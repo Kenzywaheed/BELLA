@@ -1,18 +1,45 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import AuthModal from './AuthModal';
 import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
 import { useWishlist } from '../context/WishlistContext';
+import { useProtectedAction } from '../hooks/useProtectedAction';
 
 function Navbar() {
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+  const [authView, setAuthView] = useState('login');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
-  const { currentUser, logout, openModal } = useAuth();
+  const { currentUser, logout } = useAuth();
   const { totalItems, setIsCartOpen } = useCart();
   const { wishlistItems } = useWishlist();
+  const { resumePendingAction } = useProtectedAction();
+
+  const openModal = (view) => {
+    setAuthView(view);
+    setIsAuthModalOpen(true);
+  };
+
+  useEffect(() => {
+    const handleOpenAuthModal = (e) => {
+      const view = e.detail || 'login';
+      openModal(view);
+    };
+
+    window.addEventListener('open-auth-modal', handleOpenAuthModal);
+    return () => window.removeEventListener('open-auth-modal', handleOpenAuthModal);
+  }, []);
+
+  // Use the new hook to resume actions on login
+  useEffect(() => {
+    if (currentUser) {
+      resumePendingAction();
+    }
+  }, [currentUser]);
 
   return (
     <>
@@ -90,6 +117,12 @@ function Navbar() {
         </button>
       </div>
     )}
+
+    <AuthModal 
+      isOpen={isAuthModalOpen} 
+      onClose={() => setIsAuthModalOpen(false)} 
+      initialView={authView} 
+    />
   </>
   );
 }

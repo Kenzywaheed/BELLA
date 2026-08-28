@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { useCart } from '../context/CartContext';
+import { useProtectedAction } from '../hooks/useProtectedAction';
 
 // Mock product data for the demo
 const mockProduct = {
@@ -23,7 +23,7 @@ const visualReviews = [
 
 function ProductDetails() {
   const { productId } = useParams();
-  const { addToCart } = useCart();
+  const { requireAuthAction } = useProtectedAction();
   const [qty, setQty] = useState(1);
 
   // In a real app, we would fetch the product by productId here.
@@ -56,7 +56,7 @@ function ProductDetails() {
               className="auth-btn" 
               style={{ flex: 1, border: 'none', cursor: 'pointer', textAlign: 'center' }}
               onClick={() => {
-                for(let i=0; i<qty; i++) addToCart(product);
+                for(let i=0; i<qty; i++) requireAuthAction('ADD_TO_CART', product);
               }}
             >
               Add to Cart

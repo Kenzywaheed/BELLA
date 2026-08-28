@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
-import { useCart } from '../context/CartContext';
 import { useWishlist } from '../context/WishlistContext';
+import { useProtectedAction } from '../hooks/useProtectedAction';
 
 function ProductCard({ product }) {
   const [isHovered, setIsHovered] = useState(false);
   const [isAdding, setIsAdding] = useState(false);
-  const { addToCart } = useCart();
   const { toggleWishlist, isInWishlist } = useWishlist();
+  const { requireAuthAction } = useProtectedAction();
 
   const handleAddToCart = (e) => {
     e.preventDefault();
     if (isAdding) return;
     
     setIsAdding(true);
-    addToCart(product);
+    requireAuthAction('ADD_TO_CART', product);
     
     // Simulate robust feedback for 1 second
     setTimeout(() => {
@@ -23,7 +23,7 @@ function ProductCard({ product }) {
 
   const handleToggleWishlist = (e) => {
     e.preventDefault();
-    toggleWishlist(product);
+    requireAuthAction('TOGGLE_WISHLIST', product);
   };
 
   return (
