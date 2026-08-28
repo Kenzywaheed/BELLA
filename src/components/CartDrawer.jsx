@@ -2,6 +2,9 @@ import React from 'react';
 import { useCart } from '../context/CartContext';
 import { Link } from 'react-router-dom';
 
+import { useAuth } from '../context/AuthContext';
+import { useToast } from '../context/ToastContext';
+
 function CartDrawer() {
   const { 
     isCartOpen, 
@@ -11,6 +14,16 @@ function CartDrawer() {
     updateQuantity, 
     subtotal 
   } = useCart();
+  const { currentUser } = useAuth();
+  const { showToast } = useToast();
+
+  const handleCheckout = () => {
+    if (!currentUser) {
+      showToast('Please login to checkout', 'error');
+      return;
+    }
+    showToast('Checkout successful!', 'success');
+  };
 
   if (!isCartOpen) return null;
 
@@ -78,7 +91,7 @@ function CartDrawer() {
             </div>
             <div className="cart-actions">
               <Link to="/cart" className="view-cart-btn" onClick={() => setIsCartOpen(false)}>VIEW CART</Link>
-              <button className="checkout-btn">CHECKOUT</button>
+              <button className="checkout-btn" onClick={handleCheckout}>CHECKOUT</button>
             </div>
           </div>
         )}

@@ -2,8 +2,21 @@ import React from 'react';
 import { useCart } from '../context/CartContext';
 import { Link } from 'react-router-dom';
 
+import { useAuth } from '../context/AuthContext';
+import { useToast } from '../context/ToastContext';
+
 function Cart() {
   const { cartItems, removeFromCart, updateQuantity, subtotal } = useCart();
+  const { currentUser } = useAuth();
+  const { showToast } = useToast();
+
+  const handleCheckout = () => {
+    if (!currentUser) {
+      showToast('Please login to checkout', 'error');
+      return;
+    }
+    showToast('Checkout successful!', 'success');
+  };
 
   return (
     <div className="page-transition" style={{ padding: '8rem 2rem', maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
@@ -74,7 +87,7 @@ function Cart() {
               <span>${subtotal.toFixed(2)}</span>
             </div>
             
-            <button className="auth-btn" style={{ width: '100%', marginTop: '3rem', display: 'block', textAlign: 'center', border: 'none' }}>
+            <button onClick={handleCheckout} className="auth-btn" style={{ width: '100%', marginTop: '3rem', display: 'block', textAlign: 'center', border: 'none' }}>
               Proceed to Checkout
             </button>
           </div>
