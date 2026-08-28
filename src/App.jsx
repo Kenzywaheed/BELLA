@@ -22,7 +22,7 @@ function App() {
     const video = document.getElementById('intro-video');
     const container = document.getElementById('intro-video-container');
 
-    if (!video || !container) {
+    if (!container) {
       setIsLoading(false);
       return;
     }
@@ -32,14 +32,26 @@ function App() {
       return;
     }
 
-    const handleVideoEnd = () => {
+    const handleEnd = () => {
       container.classList.add('hidden');
-      setTimeout(() => container.remove(), 300);
+      setTimeout(() => container.remove(), 100);
       setIsLoading(false);
     };
 
-    video.addEventListener('ended', handleVideoEnd);
-    return () => video.removeEventListener('ended', handleVideoEnd);
+    const isMobile = window.innerWidth <= 768;
+
+    if (isMobile) {
+      // Show image for 0.01 seconds on mobile
+      const timer = setTimeout(handleEnd, 10);
+      return () => clearTimeout(timer);
+    } else {
+      if (video) {
+        video.addEventListener('ended', handleEnd);
+        return () => video.removeEventListener('ended', handleEnd);
+      } else {
+        handleEnd();
+      }
+    }
   }, [isLoading]);
 
   return (
