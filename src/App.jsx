@@ -41,8 +41,8 @@ function App() {
     const isMobile = window.innerWidth <= 768;
 
     if (isMobile) {
-      // Show image for 0.01 seconds on mobile
-      const timer = setTimeout(handleEnd, 10);
+      // Show image for 0.4 seconds on mobile
+      const timer = setTimeout(handleEnd, 400);
       return () => clearTimeout(timer);
     } else {
       if (video) {
